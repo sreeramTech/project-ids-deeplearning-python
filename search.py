@@ -2,7 +2,7 @@ import os
 import jsonParser
 import requests
 from time import sleep 
-fp = open("trainingDataset.text","a")
+fp = open("trainingSet/trainingDataset.text","a")
 # requests setup
 requests.urllib3.disable_warnings()
 client =  requests.session()
