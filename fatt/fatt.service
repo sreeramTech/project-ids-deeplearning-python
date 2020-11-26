@@ -1,0 +1,11 @@
+[Unit]
+Description=Fatt
+After=multi-user.target
+
+[Service]
+Type=idle
+Restart=always
+ExecStart=/bin/sh -c 'timestamp=$$(date +"%%Y%%m%%dT%%H%%M%%S"); exec /usr/bin/python3 /opt/fatt/fatt.py -i eth0 -j -o /var/log/fatt/fatt.json -w /var/log/fatt/pcap/%H_$${timestamp}.pcap'
+
+[Install]
+WantedBy=multi-user.target

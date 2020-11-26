@@ -1,0 +1,26 @@
+from shell import Shell
+import jsonParser
+import requests
+from time import sleep
+ 
+sh = Shell(has_input = True)
+pcap_command = 'python3 fatt/fatt.py -r smallFlows.pcap -j'
+fatt = sh.run(pcap_command)
+
+# requests setup
+requests.urllib3.disable_warnings()
+client =  requests.session()
+client.verify = False
+
+apikey =  '# requests setup
+requests.urllib3.disable_warnings()
+client =  requests.session()
+client.verify = False'
+
+hashes = jsonParser.jsonParser('fatt.log')
+
+
+
+
+
+
